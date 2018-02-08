@@ -1,5 +1,8 @@
 {
-  "name"    : "electrontest",
-  "version" : "0.1.0",
-  "main"    : "index.js"
+  "name": "electrontest",
+  "version": "0.1.0",
+  "main": "index.js",
+  "dependencies": {
+    "three": "^0.89.0"
+  }
 }
