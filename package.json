@@ -4,6 +4,7 @@
   "main": "index.js",
   "dependencies": {
     "three": "^0.89.0",
+    "three-orbitcontrols": "^2.0.0",
     "three.interaction": "0.0.7"
   },
   "devDependencies": {
