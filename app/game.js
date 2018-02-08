@@ -22,7 +22,8 @@ const windowWidthMargin = 10;
 let playing = false;
 
 const run = () => {
-	const camera = new THREE.PerspectiveCamera(70, window.innerWidth - windowWidthMargin / window.innerHeight - windowHeightMargin, 0.01, 10);
+	console.log(window.innerWidth);
+	const camera = new THREE.PerspectiveCamera(70, (window.innerWidth - windowWidthMargin) / (window.innerHeight - windowHeightMargin), 0.01, 10);
 	camera.position.z = 1.2;
 	const controls = new OrbitControls(camera);
 	const scene = new THREE.Scene();
@@ -70,6 +71,7 @@ const run = () => {
 	});
 	
 	window.addEventListener('resize', () => {
+		console.log(window.innerWidth);
 		camera.aspect = (window.innerWidth - windowWidthMargin) / (window.innerHeight - windowHeightMargin);
 		camera.updateProjectionMatrix();
 		renderer.setSize(window.innerWidth - windowWidthMargin, window.innerHeight - windowHeightMargin);
@@ -87,7 +89,7 @@ const run = () => {
 			return;
 		}
 		
-		nextStates = [];
+		const nextStates = [];
 
 		cells.forEach((row, i) => {
 			nextStates.push([]);
