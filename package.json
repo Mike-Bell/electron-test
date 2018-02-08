@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "main": "index.js",
   "dependencies": {
-    "three": "^0.89.0"
+    "three": "^0.89.0",
+    "three.interaction": "0.0.7"
+  },
+  "devDependencies": {
+    "electron": "^1.8.2"
+  },
+  "scripts": {
+    "dev": "node_modules/.bin/electron ."
   }
 }
